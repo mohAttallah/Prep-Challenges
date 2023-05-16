@@ -24,9 +24,9 @@
         {
             "language": "javascript",
             "source": [
-                " "
+                "function equalizeArray(arr) {\r\n    let arrObj = {};\r\n  let maxCount = 0;\r\nfor (let num of arr) {\r\n    arrObj[num] = arrObj[num] + 1 || 1;\r\n  }\r\nfor (let value in arrObj) {\r\n    if (arrObj[value] > maxCount) {\r\n      maxCount = arrObj[value];\r\n    }\r\n  }\r\nreturn (arr.length - maxCount);\r\n}\r\n"
             ],
-            "outputs": [2]
+            "outputs": []
         },
         {
             "language": "markdown",
@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-
+                "function howManyGames(p, d, m, s) {\r\n    let totalCost = p;\r\n  let gameCount = 0;\r\n\r\n  while(totalCost <= s){\r\n    p = p - d;\r\n    if(p <= m){\r\n      totalCost = totalCost + m;\r\n      gameCount++;\r\n    }else{\r\n      totalCost = totalCost + p;\r\n      gameCount++;\r\n    }\r\n\r\n  }\r\n\r\n  return gameCount;\r\n}"
             ],
             "outputs": []
         },
@@ -59,65 +59,9 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function squares(a, b) {\r\n    \r\n    let square = 0, i = 1, count = 0;\r\n    while (square <= b) {\r\n        square = i * i;\r\n        if (square >= a && square <= b) {\r\n            count += 1;\r\n        }\r\n        i += 1;\r\n    }\r\n    return count\r\n\r\n}"
             ],
             "outputs": []
         }
     ]
-}
-
-Q.1
-
-function equalizeArray(arr) {
-    // Write your code here
-    let arrObj = {};
-  let maxCount = 0;
-for (let num of arr) {
-    arrObj[num] = arrObj[num] + 1 || 1;
-  }
-for (let value in arrObj) {
-    if (arrObj[value] > maxCount) {
-      maxCount = arrObj[value];
-    }
-  }
-return (arr.length - maxCount);
-}
-
-Q.2
-
-function howManyGames(p, d, m, s) {
-    //
-    let totalCost = p;
-  let gameCount = 0;
-  
-  while(totalCost <= s){
-    p = p - d;
-    if(p <= m){
-      totalCost = totalCost + m;
-      gameCount++;
-    }else{
-      totalCost = totalCost + p;
-      gameCount++;
-    }
-    
-  }
-  
-  return gameCount;
-}
-
-
-Q.3
-
-function squares(a, b) {
-    // Write your code here
-    let square = 0, i = 1, count = 0;
-    while (square <= b) {
-        square = i * i;
-        if (square >= a && square <= b) {
-            count += 1;
-        }
-        i += 1;
-    }
-    return count
-
 }

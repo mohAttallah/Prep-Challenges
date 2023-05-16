@@ -1,0 +1,123 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                " "
+            ],
+            "outputs": [2]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
+
+Q.1
+
+function equalizeArray(arr) {
+    // Write your code here
+    let arrObj = {};
+  let maxCount = 0;
+for (let num of arr) {
+    arrObj[num] = arrObj[num] + 1 || 1;
+  }
+for (let value in arrObj) {
+    if (arrObj[value] > maxCount) {
+      maxCount = arrObj[value];
+    }
+  }
+return (arr.length - maxCount);
+}
+
+Q.2
+
+function howManyGames(p, d, m, s) {
+    //
+    let totalCost = p;
+  let gameCount = 0;
+  
+  while(totalCost <= s){
+    p = p - d;
+    if(p <= m){
+      totalCost = totalCost + m;
+      gameCount++;
+    }else{
+      totalCost = totalCost + p;
+      gameCount++;
+    }
+    
+  }
+  
+  return gameCount;
+}
+
+
+Q.3
+
+function squares(a, b) {
+    // Write your code here
+    let square = 0, i = 1, count = 0;
+    while (square <= b) {
+        square = i * i;
+        if (square >= a && square <= b) {
+            count += 1;
+        }
+        i += 1;
+    }
+    return count
+
+}
